@@ -255,10 +255,28 @@ body {
   background: rgba(0, 0, 0, 0.05);
 }
 
-[data-theme="light"] .warning-banner {
-  background: rgba(180, 130, 30, 0.1);
-  border-color: rgba(180, 130, 30, 0.3);
-  color: #92600a;
+/* Status colours (banners, badges, error text) use Tailwind palette classes
+   picked for dark backgrounds: pale text shades (100-400) on dark tints
+   (800-950). On the light theme, swap those palette variables for dark text
+   and pale tints, so every such class keeps >= 4.5:1 contrast without
+   per-component light variants. */
+[data-theme="light"] {
+  --color-amber-100: #3b1502;
+  --color-amber-200: #3b1502;
+  --color-amber-300: #5c2408;
+  --color-amber-400: #6b2e0a;
+  --color-amber-800: #fbbf24;
+  --color-amber-900: #fcd34d;
+  --color-amber-950: #fde68a;
+  --color-red-200: #4c0d0d;
+  --color-red-400: #8f1414;
+  --color-red-800: #f87171;
+  --color-red-900: #fca5a5;
+  --color-orange-300: #5a1e08;
+  --color-orange-400: #7a2a0a;
+  --color-yellow-400: #6b3d0a;
+  --color-green-400: #166534;
+  --color-blue-400: #1d4ed8;
 }
 
 [data-theme="dark"] {
