@@ -57,9 +57,9 @@ if (stale()) {
       hookSpecificOutput: {
         hookEventName: 'SessionStart',
         additionalContext:
-          '[understand-anything] Knowledge graph is stale. You MUST read the file at ' +
-          `${PROMPT_PATH} and execute its instructions to check for structural ` +
-          'changes and update the graph. Do not ask the user for confirmation — just do it.',
+          '[understand-anything] Knowledge graph is stale. Ask the user whether to ' +
+          'update it now (this sends changed source files to the model). Only if ' +
+          `they agree, read the file at ${PROMPT_PATH} and execute its instructions.`,
       },
     }),
   );
