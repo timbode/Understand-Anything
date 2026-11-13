@@ -6,6 +6,7 @@ import type { CodeLessonSection, CodeLessons } from "@understand-anything/core/t
 import { useDashboardStore } from "../store";
 import { useI18n } from "../contexts/I18nContext";
 import { normalizeCodeLessons } from "../utils/codeLessons";
+import SafeMarkdownImage from "./SafeMarkdownImage";
 
 interface CodeViewerProps {
   accessToken: string;
@@ -141,7 +142,7 @@ function MarkdownView({ content }: { content: string }) {
           ),
           td: ({ children }) => <td className="border border-border-subtle px-2.5 py-1.5">{children}</td>,
           img: ({ src, alt }) => (
-            <img src={src} alt={alt} className="max-w-full rounded-lg border border-border-subtle my-2" />
+            <SafeMarkdownImage src={src} alt={alt} className="max-w-full rounded-lg border border-border-subtle my-2" />
           ),
         }}
       >
@@ -176,6 +177,7 @@ function LessonMarkdown({ content }: { content: string }) {
         ol: ({ children }) => (
           <ol className="list-decimal list-inside mb-1.5 space-y-0.5">{children}</ol>
         ),
+        img: SafeMarkdownImage,
       }}
     >
       {content}
