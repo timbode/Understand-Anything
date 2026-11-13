@@ -10,8 +10,8 @@ export function hexToRgb(hex: string): string {
 function deriveFromAccent(accentHex: string, isDark: boolean): Record<string, string> {
   const rgb = hexToRgb(accentHex);
   return {
-    "color-border-subtle": `rgba(${rgb}, ${isDark ? 0.12 : 0.1})`,
-    "color-border-medium": `rgba(${rgb}, ${isDark ? 0.25 : 0.18})`,
+    "color-border-subtle": `rgba(${rgb}, ${isDark ? 0.22 : 0.2})`,
+    "color-border-medium": `rgba(${rgb}, ${isDark ? 0.4 : 0.35})`,
     "glass-bg": isDark ? "rgba(20, 20, 20, 0.8)" : "rgba(255, 255, 255, 0.8)",
     "glass-bg-heavy": isDark ? "rgba(20, 20, 20, 0.95)" : "rgba(255, 255, 255, 0.95)",
     "glass-border": `rgba(${rgb}, ${isDark ? 0.1 : 0.08})`,

@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import ReactMarkdown from "react-markdown";
 import { useDashboardStore } from "../store";
 import { useI18n } from "../contexts/I18nContext";
+import SafeMarkdownImage from "./SafeMarkdownImage";
 
 export default function LearnPanel() {
   const graph = useDashboardStore((s) => s.graph);
@@ -148,6 +149,7 @@ export default function LearnPanel() {
                   {children}
                 </ol>
               ),
+              img: SafeMarkdownImage,
             }}
           >
             {step.description}

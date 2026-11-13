@@ -198,7 +198,7 @@ export default function StalenessBanner({ freshness }: StalenessBannerProps) {
           <span className="block text-amber-100/70">{content.action}</span>
         </span>
         {hasFiles && (
-          <span className="text-xs text-amber-300/70 shrink-0">
+          <span className="text-xs text-amber-300 shrink-0">
             {expanded ? "hide files" : "show files"}
           </span>
         )}
@@ -216,7 +216,7 @@ export default function StalenessBanner({ freshness }: StalenessBannerProps) {
               </code>
             ))}
             {hiddenFileCount > 0 && (
-              <span className="text-xs text-amber-200/60">
+              <span className="text-xs text-amber-200">
                 +{hiddenFileCount} more
               </span>
             )}

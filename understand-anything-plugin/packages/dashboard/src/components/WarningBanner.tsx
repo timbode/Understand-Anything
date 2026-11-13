@@ -87,9 +87,9 @@ export default function WarningBanner({ issues }: WarningBannerProps) {
     ? "hover:bg-red-900/15"
     : "hover:bg-amber-900/10";
   const iconClasses = hasFatal ? "text-red-400" : "text-amber-400";
-  const hintClasses = hasFatal ? "text-red-400/60" : "text-amber-400/60";
+  const hintClasses = hasFatal ? "text-red-400" : "text-amber-400";
   const dividerClasses = hasFatal ? "border-red-700/50" : "border-amber-700/50";
-  const footerTextClasses = hasFatal ? "text-red-200/70" : "text-amber-200/60";
+  const footerTextClasses = hasFatal ? "text-red-200" : "text-amber-200";
   const buttonClasses = hasFatal
     ? "bg-red-800/40 text-red-200 hover:bg-red-800/60"
     : "bg-amber-800/40 text-amber-200 hover:bg-amber-800/60";

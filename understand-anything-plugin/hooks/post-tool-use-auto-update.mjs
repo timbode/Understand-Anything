@@ -47,9 +47,9 @@ async function main() {
 
   const additionalContext =
     `[understand-anything] Commit detected with auto-update enabled. ` +
-    `You MUST read the file at ${PROMPT_PATH} ` +
-    'and execute its instructions to incrementally update the knowledge graph. ' +
-    'Do not ask the user for confirmation — just do it.';
+    'Ask the user whether to incrementally update the knowledge graph now ' +
+    '(this sends changed source files to the model). Only if they agree, ' +
+    `read the file at ${PROMPT_PATH} and execute its instructions.`;
 
   process.stdout.write(
     JSON.stringify({

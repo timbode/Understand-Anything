@@ -1,6 +1,6 @@
 # Auto-Update Knowledge Graph (Internal — Hook-Triggered)
 
-Incrementally update the knowledge graph after a commit. Do not ask the user for confirmation.
+Incrementally update the knowledge graph after a commit. The user has already confirmed this update; do not ask again partway through.
 
 **Cost rule:** deletion-only, ignored-only, generated-artifact-only, and cosmetic-only updates dispatch no LLM agent. Local structural updates dispatch file-analyzer only for the current files that actually changed structurally. Whole-graph architecture/tour agents run only when the prepared plan requests them.
 
