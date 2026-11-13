@@ -78,10 +78,11 @@
   /* Kbd */
   --kbd-bg: rgba(212, 165, 116, 0.1);
 
-  /* Typography */
-  --font-serif: 'DM Serif Display', Georgia, serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  /* Typography — no web fonts are loaded; the named fonts are used only if
+     installed locally, otherwise the system fallbacks apply. */
+  --font-serif: 'DM Serif Display', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-heading: var(--font-serif);
 }
 
